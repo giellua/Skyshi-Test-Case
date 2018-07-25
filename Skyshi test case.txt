@@ -1,0 +1,78 @@
+Test Case
+
+0.Website
+- Pada saat-saat tertentu selalu muncul "An unexpected error has occured"(fail server)
+home -ke- semua menu(saya rasa server)
+
+1. Daftar
+
+Pada Menu Daftar hanya kurang validasi saja pada First Name dan Last Name
+Pada saat saya menginputkan nama dengan angka 9191 website masih bisa mendaftarkan user tersebut
+untuk Fitur First name,last name, email, password,term and condition serta register di selenium tidak terjadi masalah tidak ada yang fail(Succesfully)
+Hanya Minus Validasi di First name dan Last name.
+Home -ke- Daftar -ke- First name/last name(validasi)
+
+2. Login
+
+a. Login Facebook dan google
+   Pada error Login jika di gunakan secara manual biasa untuk login facebook dan login google tidak ada masalah pop up ke facebook dan google semua jalan
+   tapi saat di cek menggunakan Selenium IDE pada saat memunculkan pop up facebook dan google pasti selalu timeout.(Fail timeout)
+Home -ke- Login -ke- Login Facebook/login google (Cek lewat Selenium IDE selalu error dibagian pop up facebook dan google)
+
+3. Mata Uang
+Pada perubahan mata uang baik sebelum login atau di menu home dan setelah login pada menu pengaturan semua berjalan lancar tidak ada kendala jika di rubah IDR maka menjadi IDR 
+begitupun sebaliknya.(Successfully)
+
+4. Bahasa
+Pada saat tampilan Home jika kita mengubah bahasa maka semua bahasa akan berubah semisal dari Indonesia ke English maka semua tampilan berubah Bahasa Inggris
+Tapi saat kita sudah login dan masuk pada pengaturan dan kita memilih bahasa maka jika kita memilih English maka tampilan masih sama menggunakan Bahasa Indonesia dan tidak berubah ke bahasa Inggris.(Fail check Manual)
+Home -ke- Login -ke- akunsaya -ke- Pengaturan -ke- Bahasa(Ketika di ubah english tidak berubah)
+
+5. Search
+a. Pada tampilan ketika user mengklik search akan ada tampilan top destination yang menurut saya ganjil adalah pada gambar destinasi wilayah numpuk dengan home dipandang kurang menarik dan menurut saya seharusnya ada scrollnya pada menu destinasi.(Fail Manual Check)
+Home -ke- Search -ke- Top Destination (gambar lokasi numpuk dengan gambar di Home/seharusnya ada tombol scroll)
+
+b. Untuk search lokasi semua berjalan lancar(succesfully)
+
+c. Pada saat saya memilih destinasi bali dan saya memilih Evoucher Bali Bird Park, disaat saya memilih ketersedian tanggal melalui manual
+   semua berjalan lancar tapi saat saya melakukan pengetestan menggunakan Selenium IDE terdapat tulisan " Failed:Permission denied to access property "document" on cross-origin object"(Fail Check Selenium IDE).
+Home -ke- Top Destination -ke- Bali -ke- E-voucher Bali Bird Park -ke- Ketersediaan tanggal(Jika di cek menggunakan manual berjalan lancar tapi saat menggunakan Selenium IDE error)
+
+d. selebihnya untuk pemilihan destinasi done(succesfully)
+
+6. Sewa Pocket Wifi
+a. Pada pemilihan tanggal di tanggal selesai,tanggal penerimaan dan tanggal pengembalian mungkin kurang menarik karena karena hanya blank saja.
+   seandainya terdapat tanggal seperti pada tanggal mulai mungkin lebih bagus.(fail datepicker)
+Home -ke- Sewa Pocket Wifi -ke- Tanggal selesai/tanggal penerimaan/tanggal pengembalian (Hanya kotak kosong ada tanggalnya manual checking)
+
+b. Pada saat saya melakukan pengetestan menggunakan Selenium IDE kendala sama seperti pada kasus sebelumnya pasti di saat datepicker/pemilihan tanggal selalu "Failed:Permission denied to access property "document" on cross-origin object".(Fail datepicker check Selenium IDE).
+Home -ke- Sewa Pocket Wifi -ke- Tanggal(semua tanggal) (saat check via Selenium IDE selalu error)
+
+c. selebihnya sih done.
+
+7. Blog
+a. Sama hal pada login facebook pada saat click Blog kalau dari Selenium IDE pasti akan Error.Pada Selenium IDE muncul tulisan Failed:Timeout seperti tidak mau menyambungkan(Failed check selenium IDE)
+Home -ke- blog(timeout check selenium IDE)
+
+8. Chat
+a. Pada chat tidak ada kendala apa-apa hanya sama seperti Blog mungkin setiap ujicoba dengan selenium IDE user harus mengklik juga ke lokasi yg di inginkan.
+Home -ke- Chat(Timed out in selenium IDE)
+
+9. Ikuti Kami
+Pada menu Ikuti kami juga sama Succesfully
+Home -ke- Ikuti Kami
+
+10. Karir
+Pada menu Karir juga tidak ada kendala apapun(succesfully)
+Home -ke- Karir -ke- karir -ke- tentang kami -ke- Hubungi kami
+ 
+11. Mode Pembayaran
+Pada mode pembayaran ini jika di check secara manual masih ada kendala dibagian logo jika di klik tidak masuk ke dalam pop up tertentu dan hanya gambar saja
+mungkin lebih bagus nya  hanya ada gambar visa dan mastercard karena untuk BCA sudah ada dalam pembayaran saat memesan tiket atau lain-lain
+Home -ke- Mode Pembayaran(hanya gambar saja BCA,VISA,MASTERCARD)
+
+12. Unduh Aplikasi
+Pada menu Unduh Aplikasi tidak ada kendala (succesfully)
+Home -ke- Unduh Aplikasi -ke- IOS/Android
+
+*Note Untuk Notifikasi error timeout login facebook/login google dan blog caranya saat selenium jalan dan click at lokasi user harus click tombol login facebook/google dan blog agar tidak error.
